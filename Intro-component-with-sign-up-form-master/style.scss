@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* Accent */
+  --blue: hsl(248, 32%, 49%);
+  /* Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --gray-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-color: var(--red);
+  background-size: cover;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
+  column-gap: 10px;
+  padding: 0 160px;
+}
+
+.form-container {
+  max-width: 450px;
+  height: 400;
+
+  .try-it {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .1);
+    color: #FFF;
+    font-weight: 700;
+    font-size: 14px;
+
+    span {
+      font-weight: 200;
+    }
+  }
+
+  form {
+    background-color: #FFF;
+    padding: 35px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 20px;
+
+      input {
+        padding: 15px 20px;
+        border: 1px solid #CCC;
+        font-weight: 600;
+        outline: none;
+        border-radius: 4px;
+        background-color: transparent;
+
+        &:focus {
+          border: 1px solid var(--dark-blue);
+        }
+
+        &[type="submit"] {
+          background-color: var(--green);
+          color: #FFF;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border: 0;
+          box-shadow: 0px 8px 15px var(--gray-blue);
+          cursor: pointer;
+        }
+      }
+
+      /* span {
+        text-align: right;
+        font-style: italic;
+        color: var(--red);
+        font-size: 10px;
+        display: none;
+      } */
+      .error {
+        background: url(../images/icon-error.svg) no-repeat;
+        background-position: 95%;
+        border: 2px solid var(--red) !important;
+      }
+
+      .err-msg {
+        font-size: 12px;
+        font-style: italic;
+        color: var(--red);
+        margin-left: auto;
+      }
+
+      .success {
+        border: 2px solid var(--green);
+      }
+    }
+
+    h5 {
+      font-size: 10px;
+      text-align: center;
+      font-weight: 200;
+      color: var(--gray-blue);
+
+      a {
+        color: var(--red);
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.left-content {
+  color: #FFF;
+
+  h1 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 200;
+  }
+}
+
+@media screen and (max-width: 756px) {
+
+  body {
+    padding: 70px 25px;
+    background-image: url(../images/bg-intro-mobile.png);
+  }
+
+  .wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: none;
+    padding: 0;
+  }
+
+  .form-container {
+    margin-top: 50px;
+
+    .try-it {
+      span {
+        display: block;
+      }
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+
+  .left-content {
+    text-align: center;
+
+    h1 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+
+}
