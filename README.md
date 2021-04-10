@@ -1,7 +1,7 @@
 # frontend-mentor
 My Frontend Mentor Challenges
 
-[Frontend Mentor Challenge - <br/> Responsive Article Preview Using HTML,CSS || CSS FLexbox](https://article-preview-omega.vercel.app/) <br/>
+[Frontend Mentor Challenge - Responsive Article Preview Using HTML,CSS || CSS FLexbox](https://article-preview-omega.vercel.app/) <br/>
 [Frontend Mentor Challenge - Fylo Data Storage](https://fylo-data-storage-cyan-ten.vercel.app/) <br/>
 [Frontend Mentor Challenge - Social Proof Section](https://social-proof-section-eight.vercel.app/)  <br/>
 [Frontend Mentor Challenge - Four Card Feature Section](https://four-card-feature-section-theta-wine.vercel.app/)  <br/>
