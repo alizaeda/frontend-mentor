@@ -1,0 +1,154 @@
+/* Globals */
+:root {
+  --darkMagneta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+  --darkGray: hsl(303, 10%, 53%);
+  --lightGray: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-size: 15px;
+  background-color: var(--white);
+  font-family: 'Spartan';
+  display: grid;
+  place-items: center;
+  background: url(images/bg-pattern-top-desktop.svg);
+}
+.container {
+  width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.inner-content {
+  width: 40%;
+}
+.inner-content .title {
+  color: var(--darkMagneta);
+  font-size: 42px;
+  margin-bottom: 1rem;
+}
+.inner-content .description {
+  color: var(--darkGray);
+  line-height: 1.6;
+}
+.rates {
+  margin-left: 10%;
+  /* width: 50%; */
+}
+.rates .rate {
+  display: flex;
+  width: 450px;
+  background-color: var(--lightGray);
+  padding: 17px;
+  margin: 15px;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+.rates .rate:nth-of-type(2) {
+  margin-left: 60px;
+}
+.rates .rate:nth-of-type(3) {
+  margin-left: 120px;
+}
+.rates .rate .rated {
+  color: var(--darkMagneta);
+  font-weight: 700;
+}
+.rates .rate:first-of-type .rated {
+  margin-right: 45px;
+}
+.rates .rate:last-of-type .rated {
+  margin-right: 45px;
+}
+/* Cards */
+.cards {
+  display: flex;
+  margin-top: 50px;
+}
+.cards .card {
+  background-color: var(--darkMagneta);
+  padding: 40px 24px;
+  color: var(--white);
+  border-radius: 8px;
+  margin: 10px 29px 10px 0
+}
+.cards .card:first-of-type {
+  transform: translateY(-15px);
+}
+.cards .card:last-of-type {
+  transform: translateY(15px);
+}
+.cards .card .card-profile {
+  display: flex;
+  align-items: center;
+}
+.cards .card .card-profile img {
+  border-radius: 50%;
+  width: 50px
+}
+.cards .card .card-profile ul {
+  list-style: none;
+  margin-left: 15px;
+}
+.cards .card .card-profile ul .profile-work {
+  color: var(--softPink);
+  margin-top: .3em;
+  font-weight: 400;
+}
+.cards .card .card-text {
+  margin-top: 20px;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media (max-width: 375px) {
+
+  body {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+    background: url(images/bg-pattern-top-mobile.svg);
+  }
+
+  .head {
+    display: grid;
+  }
+
+  .rates {
+    margin: 0;
+    text-align: center
+  }
+
+  .rates .rate {
+    margin-left: 0 !important;
+    display: table;
+  }
+  .rates .rate .rated {
+    margin-right: 0 !important;
+    margin-top: 10px
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+  
+  .card {
+    width: 450px;
+    transform: translateY(0) !important;
+    margin: 10px 45px !important;
+  }
+
+}
