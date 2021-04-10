@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$primaryFont: var(--main-font);
+$boldFont: var(--bold-font);
+$primaryOrange: var(--primary-orange);
+$primaryDark: var(--primary-dark);
+$primaryVeryDark: var(--primary-very-dark);
+$lightBhb: var(--light-bhb);
+$paragraphWhite: var(--paragraph-white);
+
+:root {
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-dark: hsl(184, 100%, 22%);
+  --primary-very-dark: hsl(179, 100%, 13%);
+  --paragraph-white: hsla(0, 0%, 100%, 0.75); // for paragraph
+  --light-bhb: hsl(0, 0%, 95%); // background, headings, buttons
+  --main-font: "Lexend Deca", sans-serif;
+  --bold-font: "Big Shoulders Display", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primaryFont;
+  font-size: 15px;
+  background-color: $lightBhb;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.cards {
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  color: $lightBhb;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin: 30px 70px;
+  }
+  &__card {
+    padding: 55px;
+    &:first-of-type {
+      background-color: $primaryOrange;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      @media (max-width: 768px) {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+      }
+    }
+    &:nth-of-type(2) {
+      background-color: $primaryDark;
+      @media (max-width: 768px) {
+        border-bottom-left-radius: 0;
+      }
+    }
+    &:nth-of-type(3) {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: $primaryVeryDark;
+      @media (max-width: 768px) {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+      }
+    }
+    img {
+      margin-bottom: 2rem;
+    }
+    .heading {
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      font-family: $boldFont;
+      font-size: 2.5rem;
+      @media (max-width: 768px) {
+      }
+    }
+    .description {
+      color: $paragraphWhite;
+      margin-bottom: 6rem;
+      line-height: 1.7;
+      opacity: 0.7;
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    .btn {
+      background-color: transparent;
+      width: 140px;
+      height: 2.7rem;
+      border-radius: 1.5rem;
+      color: $paragraphWhite;
+      border: 2px solid $paragraphWhite;
+      font-family: $primaryFont;
+      cursor: grabbing; // grab
+      transition: background-color 0.5s;
+      letter-spacing: 1px;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: $lightBhb;
+      }
+      &__sedans:hover {
+        color: $primaryOrange;
+      }
+      &__suvs:hover {
+        color: $primaryDark;
+      }
+      &__luxury:hover {
+        color: $primaryVeryDark;
+      }
+    }
+  }
+}

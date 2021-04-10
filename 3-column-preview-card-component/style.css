@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-dark: hsl(184, 100%, 22%);
+  --primary-very-dark: hsl(179, 100%, 13%);
+  --paragraph-white: hsla(0, 0%, 100%, 0.75);
+  --light-bhb: hsl(0, 0%, 95%);
+  --main-font: "Lexend Deca", sans-serif;
+  --bold-font: "Big Shoulders Display", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 15px;
+  background-color: var(--light-bhb);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.cards {
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--light-bhb);
+}
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 30px 70px;
+  }
+}
+.cards__card {
+  padding: 55px;
+}
+.cards__card:first-of-type {
+  background-color: var(--primary-orange);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+@media (max-width: 768px) {
+  .cards__card:first-of-type {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+}
+.cards__card:nth-of-type(2) {
+  background-color: var(--primary-dark);
+}
+@media (max-width: 768px) {
+  .cards__card:nth-of-type(2) {
+    border-bottom-left-radius: 0;
+  }
+}
+.cards__card:nth-of-type(3) {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--primary-very-dark);
+}
+@media (max-width: 768px) {
+  .cards__card:nth-of-type(3) {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+}
+.cards__card img {
+  margin-bottom: 2rem;
+}
+.cards__card .heading {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-family: var(--bold-font);
+  font-size: 2.5rem;
+}
+.cards__card .description {
+  color: var(--paragraph-white);
+  margin-bottom: 6rem;
+  line-height: 1.7;
+  opacity: 0.7;
+}
+@media (max-width: 768px) {
+  .cards__card .description {
+    margin-bottom: 1.5rem;
+  }
+}
+.cards__card .btn {
+  background-color: transparent;
+  width: 140px;
+  height: 2.7rem;
+  border-radius: 1.5rem;
+  color: var(--paragraph-white);
+  border: 2px solid var(--paragraph-white);
+  font-family: var(--main-font);
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  transition: background-color 0.5s;
+  letter-spacing: 1px;
+}
+.cards__card .btn:focus {
+  outline: none;
+}
+.cards__card .btn:hover {
+  background-color: var(--light-bhb);
+}
+.cards__card .btn__sedans:hover {
+  color: var(--primary-orange);
+}
+.cards__card .btn__suvs:hover {
+  color: var(--primary-dark);
+}
+.cards__card .btn__luxury:hover {
+  color: var(--primary-very-dark);
+}
