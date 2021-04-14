@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --primary-dark: hsl(185, 75%, 39%);
+  --primary-dark-blue: hsl(229, 23%, 23%);
+  --primary-gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --ns-font: 18px;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-color: var(--primary-dark);
+  background-attachment: fixed;
+  background-position: -6% 1040%, 98% -1180%;
+  background-position: right 51vw bottom 40vh, left 49vw top 52vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  body {
+    background-position: right 51vw bottom 41vh, left 28vw top 52vh;
+  }
+}
+
+.card {
+  background-color: #fff;
+  width: 340px;
+  max-width: 340px;
+  height: 360px;
+  border-radius: 15px;
+  box-shadow: 0 15px 10px var(--primary-dark);
+  display: flex;
+  flex-direction: column;
+}
+.card__top {
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-image: url(../images/bg-pattern-card.svg);
+  height: 40%;
+  position: relative;
+}
+.card__top img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__body {
+  text-align: center;
+  margin-top: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.card__heading {
+  color: var(--primary-dark-blue);
+  font-size: 18px;
+}
+.card__heading span {
+  color: var(--primary-gray-blue);
+  font-weight: 300;
+  margin-left: 5px;
+}
+.card__country {
+  margin-top: -10px;
+  color: var(--primary-gray-blue);
+  font-weight: 300;
+  font-size: 14px;
+}
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 10px 35px;
+  text-align: center;
+}
+.card__stats div p:first-of-type {
+  font-weight: bold;
+  color: var(--primary-dark-blue);
+  font-size: var(--ns-font);
+}
+.card__stats div p:last-of-type {
+  margin-top: -14px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  font-weight: bold;
+  font-size: 11px;
+  text-align: center;
+}
